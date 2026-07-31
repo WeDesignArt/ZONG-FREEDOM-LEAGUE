@@ -1,0 +1,1253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zong Freedom League 2026</title>
+
+  <!-- LOCAL PREVIEW ONLY: the live Zong WordPress theme already loads Bootstrap
+     grid (container/row/col-*) and its own reset globally, so this line should
+     NOT be copied into the WordPress Custom HTML block below. It's here only so
+     the layout renders correctly when you open this file directly in a browser. -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+
+</head>
+
+<body>
+
+  <!-- ============================================================ -->
+  <!-- WORDPRESS PASTE START — copy everything from here down to    -->
+  <!-- "WORDPRESS PASTE END" into the WordPress Custom HTML block.  -->
+  <!-- ============================================================ -->
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+  <style>
+    body {
+      color: #2f2f2f;
+      font-family: "Geogrotesque Rg", sans-serif;
+      font-weight: normal;
+      font-style: normal;
+    }
+
+    .inner_content h1,
+    .inner_content .h1,
+    .inner_content h1 a,
+    .inner_content .h1 a,
+    .inner_content h2,
+    .inner_content .h2,
+    .inner_content h2 a,
+    .inner_content .h2 a,
+    .inner_content h3,
+    .inner_content .h3,
+    .inner_content h3 a,
+    .inner_content .h3 a,
+    .inner_content h4,
+    .inner_content .h4,
+    .inner_content h4 a,
+    .inner_content .h4 a,
+    .inner_content h5,
+    .inner_content .h5,
+    .inner_content h5 a,
+    .inner_content .h5 a,
+    .inner_content h6,
+    .inner_content .h6,
+    .inner_content h6 a,
+    .inner_content .h6 a {
+      margin: 0 0 20px;
+    }
+
+    .inner_content h3 {
+      font-size: 24px;
+      font-size: 1.5rem;
+      line-height: 34px;
+    }
+
+
+    :root {
+      --zong-green: #118632;
+      --zong-dark-green: #0b5e22;
+      --zong-light-green: #eaf6ec;
+      --zong-accent: #8cc63f;
+      --text-dark: #1e293b;
+      --text-muted: #64748b;
+      --bg-light: #f8fafc;
+      --white: #ffffff;
+      --border-color: #e2e8f0;
+      --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.08);
+      --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.06);
+      --radius: 12px;
+    }
+
+    h2,
+    h3,
+    h4,
+    h5 {
+      color: #e40076;
+      font-family: "Arca Bold", sans-serif;
+      font-weight: normal;
+      font-style: normal;
+      text-transform: uppercase;
+
+    }
+
+    p,
+    span {
+      font-family: "Geogrotesque Rg", sans-serif;
+    }
+
+    a.btn.bmz.primary {
+      background: #e40076;
+      border: 1px solid #e40076;
+    }
+
+    a.btn.bmz {
+      -webkit-border-radius: 26px;
+      -ms-border-radius: 26px;
+      border-radius: 26px;
+      color: #fff;
+      font-size: 17px;
+      font-size: 1.0625rem;
+      margin-top: 10px;
+      padding: 6px 40px;
+    }
+
+
+
+    .btn {
+      display: inline-block;
+      font-weight: 400;
+      line-height: 1.5;
+      color: #fff;
+      text-align: center;
+      text-decoration: none;
+      vertical-align: middle;
+      cursor: pointer;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      user-select: none;
+      background-color: rgba(0, 0, 0, 0);
+      border: 1px solid rgba(0, 0, 0, 0);
+      padding: 0.375rem 0.75rem;
+      font-size: 1rem;
+      border-radius: 0.25rem;
+      font-family: "Geogrotesque Rg", sans-serif;
+      transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    }
+
+
+
+    .hero_holder {
+      font-size: 0;
+      width: 100%;
+      z-index: 1;
+    }
+
+    .hero_holder .inner_hero {
+      width: 100%;
+    }
+
+    .hero_holder .inner_hero img {
+      width: 100%;
+    }
+
+    .hero-title h1 {
+      color: #8cc63e;
+    }
+
+
+
+    .hero-container {
+      display: flex;
+      align-items: center;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+
+    .hero-content {
+      flex: 1;
+      min-width: 300px;
+    }
+
+    .campaign-badge {
+      background: rgba(255, 255, 255, 0.2);
+      padding: 6px 14px;
+      border-radius: 20px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      display: inline-block;
+      margin-bottom: 16px;
+    }
+
+    .hero-title {
+      padding: 30px 0 30px;
+      margin-bottom: 16px;
+
+    }
+
+    .hero-subtitle {
+      font-size: 1.1rem;
+      opacity: 0.9;
+      margin-bottom: 28px;
+    }
+
+    .btn-primary {
+      display: inline-block;
+      background-color: var(--zong-accent);
+      color: #073b16;
+      font-weight: 700;
+      padding: 14px 32px;
+      border-radius: 30px;
+      text-decoration: none;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+      transition: transform 0.2s ease, background 0.2s ease;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      background-color: #9de246;
+    }
+
+    .hero-image-wrapper {
+      flex: 1;
+      min-width: 300px;
+    }
+
+    .image-placeholder {
+      background: rgba(255, 255, 255, 0.1);
+      border: 2px dashed rgba(255, 255, 255, 0.4);
+      border-radius: var(--radius);
+      padding: 40px 20px;
+      text-align: center;
+      color: rgba(255, 255, 255, 0.8);
+    }
+
+    .placeholder-icon {
+      font-size: 2.5rem;
+      margin-bottom: 12px;
+    }
+
+    /* LEAGUE STATUS SECTION */
+    .status-section {
+      margin-top: -30px;
+      position: relative;
+      z-index: 10;
+    }
+
+    .status-card {
+      background: var(--white);
+      padding: 28px;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow-md);
+      border: 1px solid var(--border-color);
+    }
+
+    .status-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+
+
+    .user-pts-badge {
+      background: var(--zong-light-green);
+      color: var(--zong-green);
+      padding: 6px 12px;
+      border-radius: 20px;
+      font-size: 0.9rem;
+    }
+
+    .tier-bar {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 10px;
+    }
+
+    .tier-step {
+      text-align: center;
+      flex: 1;
+      opacity: 0.5;
+    }
+
+    .tier-step.active {
+      opacity: 1;
+      font-weight: 700;
+      color: var(--zong-green);
+    }
+
+    .tier-name {
+      display: block;
+      font-size: 0.95rem;
+    }
+
+    .tier-range {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+    }
+
+    .league-progress-container {
+      height: 10px;
+      background: #e2e8f0;
+      border-radius: 5px;
+      overflow: hidden;
+      margin-bottom: 16px;
+    }
+
+    .league-progress-fill {
+      height: 100%;
+      background: var(--zong-green);
+      border-radius: 5px;
+    }
+
+    .status-note {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      text-align: center;
+    }
+
+    /* PRIZES SECTION */
+    .prizes-section {
+      padding: 60px 0;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+
+    .tbd-tag {
+      color: #e11d48;
+      font-size: 1rem;
+    }
+
+    .section-title p {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      margin-top: 6px;
+    }
+
+    .prizes-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+    }
+
+    .prize-card {
+      background: var(--white);
+      border-radius: var(--radius);
+      padding: 24px;
+      border: 1px solid var(--border-color);
+      text-align: center;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .prize-card.highlight {
+      border: 2px solid var(--zong-green);
+      position: relative;
+    }
+
+    .prize-image-placeholder {
+      background: #f1f5f9;
+      border: 1px dashed #cbd5e1;
+      border-radius: 8px;
+      padding: 30px 10px;
+      margin-bottom: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      color: var(--text-muted);
+      font-size: 0.85rem;
+    }
+
+
+    /* MISSIONS & TIMELINE */
+    .missions-section {}
+
+    .mission-timeline {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 50px;
+      overflow-x: auto;
+      padding-bottom: 10px;
+    }
+
+    .timeline-step {
+      text-align: center;
+      flex: 1;
+      min-width: 110px;
+      position: relative;
+    }
+
+    .timeline-step:not(:last-child)::after {
+      content: '';
+      position: absolute;
+      top: 18px;
+      left: 50%;
+      width: 100%;
+      height: 3px;
+      background: #e2e8f0;
+      z-index: 1;
+    }
+
+    .timeline-step.completed:not(:last-child)::after {
+      background: var(--zong-green);
+    }
+
+    .step-circle {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: var(--white);
+      border: 2px solid #cbd5e1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 10px;
+      position: relative;
+      z-index: 2;
+      font-weight: 700;
+      font-size: 0.85rem;
+    }
+
+    .timeline-step.completed .step-circle {
+      background: var(--zong-green);
+      border-color: var(--zong-green);
+      color: var(--white);
+    }
+
+    .timeline-step.active .step-circle {
+      border-color: #2563eb;
+      color: #2563eb;
+      background: #eff6ff;
+    }
+
+    .step-title {
+      display: block;
+      font-size: 0.8rem;
+      font-weight: 600;
+      margin-bottom: 2px;
+    }
+
+    .step-pts {
+      font-size: 0.75rem;
+      color: var(--zong-green);
+      font-weight: 700;
+    }
+
+    .subsection-title {
+      font-size: 1.3rem;
+      margin-bottom: 20px;
+    }
+
+    .cards-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+
+    .mission-card {
+      background: var(--bg-light);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius);
+      padding: 20px;
+      transition: transform 0.2s ease;
+    }
+
+    .mission-card:hover {
+      transform: translateY(-2px);
+    }
+
+    .mission-card.active-card {
+      border: 1.5px solid #2563eb;
+      background: #f8fafc;
+    }
+
+    .card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 12px;
+    }
+
+    .card-icon {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: #e2e8f0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--text-dark);
+    }
+
+    .completed .card-icon {
+      background: var(--zong-light-green);
+      color: var(--zong-green);
+    }
+
+    .pts-pill {
+      background: var(--zong-light-green);
+      color: var(--zong-green);
+      font-weight: 700;
+      font-size: 0.8rem;
+      padding: 4px 10px;
+      border-radius: 12px;
+    }
+
+    .mission-card h4 {
+      font-size: 1rem;
+      margin-bottom: 6px;
+    }
+
+    .mission-card p {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    /* HOW IT WORKS */
+    .how-it-works-section {
+      padding: 60px 0;
+    }
+
+    .steps-flow {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .flow-step {
+      flex: 1;
+      min-width: 200px;
+      text-align: center;
+      background: var(--white);
+      padding: 24px 16px;
+      border-radius: var(--radius);
+      border: 1px solid var(--border-color);
+    }
+
+    .flow-circle {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      background: #dbeafe;
+      color: #1d4ed8;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 14px;
+    }
+
+    .flow-step h3 {
+      font-size: 1.05rem;
+      margin-bottom: 8px;
+    }
+
+    .flow-step p {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    .flow-arrow {
+      color: var(--text-muted);
+      font-size: 1.2rem;
+    }
+
+    /* FAQ SECTION */
+    .faq-section {
+      padding: 60px 0;
+      background: var(--white);
+    }
+
+
+
+    .faq-item {
+      border-bottom: 1px solid var(--border-color);
+      padding: 16px 0;
+    }
+
+    .faq-item summary {
+      font-weight: 600;
+      font-size: 1rem;
+      cursor: pointer;
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .faq-item summary::after {
+      content: '\f078';
+      font-family: 'Font Awesome 6 Free';
+      font-weight: 900;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      transition: transform 0.2s ease;
+    }
+
+    .faq-item[open] summary::after {
+      transform: rotate(180deg);
+    }
+
+    .faq-answer {
+      margin-top: 10px;
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+
+    /* MISSION ACTIONS (DEMO) */
+    .mission-action-btn {
+      margin-top: 14px;
+      width: 100%;
+      padding: 10px 14px;
+      border-radius: 8px;
+      border: none;
+      background: var(--zong-green);
+      color: var(--white);
+      font-weight: 600;
+      font-size: 0.85rem;
+      cursor: pointer;
+      transition: background 0.2s ease;
+    }
+
+    .mission-action-btn:hover {
+      background: var(--zong-dark-green);
+    }
+
+    .mission-action-btn:disabled,
+    .mission-action-btn.is-done {
+      background: var(--zong-light-green);
+      color: var(--zong-green);
+      cursor: default;
+    }
+
+    .mission-auto-pill {
+      display: inline-block;
+      margin-top: 14px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--zong-green);
+    }
+
+    .demo-controls {
+      text-align: center;
+      margin-top: 24px;
+    }
+
+    .demo-reset-btn {
+      background: none;
+      border: 1px dashed var(--text-muted);
+      color: var(--text-muted);
+      padding: 8px 16px;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      cursor: pointer;
+    }
+
+    .demo-reset-btn:hover {
+      color: var(--text-dark);
+      border-color: var(--text-dark);
+    }
+
+    /* FOOTER */
+    .site-footer {
+      background: var(--text-dark);
+      color: #94a3b8;
+      padding: 30px 0;
+      font-size: 0.85rem;
+      text-align: center;
+    }
+
+    .partner-text {
+      color: var(--white);
+      margin-bottom: 8px;
+    }
+
+    .footer-meta {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .footer-meta .divider {
+      opacity: 0.3;
+    }
+
+    /* RESPONSIVE BREAKPOINTS */
+    @media (max-width: 768px) {
+
+      .status-header {
+        flex-direction: column;
+      }
+
+      .hero-container {
+        text-align: center;
+      }
+
+      .flow-arrow {
+        display: none;
+      }
+
+      .steps-flow {
+        flex-direction: column;
+      }
+
+      .flow-step {
+        width: 100%;
+      }
+    }
+  </style>
+
+  <!-- hero start -->
+  <!-- hero start -->
+  <section class="hero_holder">
+    <div id="main_hero" class="inner_hero">
+      <picture>
+        <source media="(min-width: 575px)"
+          srcset="https://www.zong.com.pk/uploads/upload_5e20bb967e60e66fd0238efd5db0c814.png" />
+        <img src="https://www.zong.com.pk/uploads/upload_64e9e85b885cd48b9cd5e28f978f2d32.png" alt="Exscape" />
+      </picture>
+    </div>
+  </section>
+
+  <!-- HERO SECTION -->
+
+  <!-- main content start -->
+  <main role="main" class="home_content bottom_negative clearfix">
+    <!-- content start -->
+    <section class="section inner_content hero-section bg_white  clearfix">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-md-12 mx-auto pt-5 pb-5">
+            <article class="">
+
+
+              <section class="hero-title text-center">
+                <h1 class="text-center pb-3">ZONG FREEDOM LEAGUE 2026</h1>
+                <h3>This August, Freedom Comes with Rewards.</h3>
+                <!-- <p>Complete missions across the Zong handset ecosystem. Earn Freedom Points. Climb the League. Win big this Independence Month.</p> -->
+                <a href="#" target="_blank" class="btn bmz primary">JOIN THE LEAGUE </a>
+
+
+
+              </section>
+
+              <!-- LEAGUE STATUS SECTION -->
+              <section class="status-section">
+                <div class="container">
+                  <div class="status-card">
+                    <div class="status-header">
+                      <h4>YOUR LEAGUE STATUS</h4>
+                      <span class="user-pts-badge"><strong id="userPointsEarned">300</strong> / 3,450 Points
+                        Earned</span>
+                    </div>
+
+                    <!-- Tier Bar -->
+                    <div class="tier-bar">
+                      <div class="tier-step active" id="tier-bronze">
+                        <span class="tier-name">BRONZE</span>
+                        <span class="tier-range">0 – 650 Points</span>
+                      </div>
+                      <div class="tier-step" id="tier-silver">
+                        <span class="tier-name">SILVER</span>
+                        <span class="tier-range">650 – 1200 pts</span>
+                      </div>
+                      <div class="tier-step" id="tier-gold">
+                        <span class="tier-name">GOLD</span>
+                        <span class="tier-range">1200 – 3500 pts</span>
+                      </div>
+                    </div>
+
+                    <!-- Progress Track -->
+                    <div class="league-progress-container">
+                      <div class="league-progress-fill" id="leagueProgressFill" style="width: 8.7%;"></div>
+                    </div>
+
+                    <!-- <p class="status-note">
+          <i class="fa-solid fa-circle-info"></i> Higher leagues unlock more lucky draw entries and exclusive rewards.
+        </p> -->
+                  </div>
+                </div>
+              </section>
+
+              <!-- WHAT YOU CAN WIN SECTION -->
+              <section class="prizes-section">
+                <div class="container">
+                  <div class="section-title">
+                    <h2>WHAT YOU CAN WIN <span class="tbd-tag">(TBD)</span></h2>
+                    <p>Reward structure and prize values to be finalized upon confirmation with OEM partners.</p>
+                  </div>
+
+                  <div class="prizes-grid">
+                    <div class="prize-card">
+                      <div class="prize-image-placeholder">
+                        <i class="fa-solid fa-gift"></i>
+                        <span>[ Weekly Prize Visual Placeholder ]</span>
+                      </div>
+                      <h3>Weekly Draws</h3>
+                      <p>Surprise prizes announced every week throughout August.</p>
+                    </div>
+
+                    <div class="prize-card highlight">
+                      <div class="prize-image-placeholder">
+                        <i class="fa-solid fa-mobile-screen-button"></i>
+                        <span>[ Grand Prize Visual Placeholder ]</span>
+                      </div>
+                      <h3>Grand Independence Day Draw</h3>
+                      <p>Flagship handsets & premium mobile accessories.</p>
+                    </div>
+
+                    <div class="prize-card">
+                      <div class="prize-image-placeholder">
+                        <i class="fa-solid fa-gem"></i>
+                        <span>[ OEM Partner Prize Visual Placeholder ]</span>
+                      </div>
+                      <h3>Exclusive OEM Prizes</h3>
+                      <p>Special gadget bundles directly from our partner brands.</p>
+                    </div>
+                  </div>
+                </div>
+              </section>
+
+
+              <!-- HOW IT WORKS SECTION -->
+              <section class="how-it-works-section">
+                <div class="container">
+                  <div class="section-title">
+                    <h2>HOW IT WORKS</h2>
+                  </div>
+                  <div class="steps-flow">
+                    <div class="flow-step">
+                      <div class="flow-circle">1</div>
+                      <h3>Register</h3>
+                      <p>Sign up for Freedom League on the My Zong App — takes 10 seconds.</p>
+                    </div>
+                    <div class="flow-arrow"><i class="fa-solid fa-angle-right"></i></div>
+
+                    <div class="flow-step">
+                      <div class="flow-circle">2</div>
+                      <h3>Complete missions</h3>
+                      <p>Visit CSCs, evaluate a trade-in, refer friends, or purchase a handset.</p>
+                    </div>
+                    <div class="flow-arrow"><i class="fa-solid fa-angle-right"></i></div>
+
+                    <div class="flow-step">
+                      <div class="flow-circle">3</div>
+                      <h3>Earn Freedom Points</h3>
+                      <p>Every mission is verified and instantly credited to your account.</p>
+                    </div>
+                    <div class="flow-arrow"><i class="fa-solid fa-angle-right"></i></div>
+
+                    <div class="flow-step">
+                      <div class="flow-circle">4</div>
+                      <h3>Climb the league</h3>
+                      <p>Progress from Bronze to Gold and unlock better rewards as you go.</p>
+                    </div>
+                  </div>
+                </div>
+              </section>
+
+
+              <!-- MISSIONS TRACKER & CHECKLIST -->
+              <section class="missions-section" id="missions">
+                <div class="container">
+                  <div class="section-title">
+                    <h2>YOUR MISSIONS</h2>
+                    <p>Track on your dashboard, tap any mission to see exactly how to complete it and how many points
+                      you’ll earn.</p>
+                  </div>
+
+                  <!-- Linear Step Tracker -->
+                  <div class="mission-timeline">
+                    <div class="timeline-step completed active" id="timeline-1">
+                      <div class="step-circle"><i class="fa-solid fa-check"></i></div>
+                      <span class="step-title">MZA Account</span>
+                      <span class="step-pts">100 pts</span>
+                    </div>
+                    <div class="timeline-step" id="timeline-2">
+                      <div class="step-circle">2</div>
+                      <span class="step-title">Visit Zong CSC</span>
+                      <span class="step-pts">200 pts</span>
+                    </div>
+                    <div class="timeline-step" id="timeline-3">
+                      <div class="step-circle">3</div>
+                      <span class="step-title">Post w/ Handset</span>
+                      <span class="step-pts">300 pts</span>
+                    </div>
+                    <div class="timeline-step" id="timeline-4">
+                      <div class="step-circle">4</div>
+                      <span class="step-title">Refer a Friend</span>
+                      <span class="step-pts">250 pts</span>
+                    </div>
+                    <div class="timeline-step" id="timeline-5">
+                      <div class="step-circle">5</div>
+                      <span class="step-title">Trade-In Eval</span>
+                      <span class="step-pts">300 pts</span>
+                    </div>
+                    <div class="timeline-step" id="timeline-6">
+                      <div class="step-circle">6</div>
+                      <span class="step-title">Purchase Handset</span>
+                      <span class="step-pts">1,000 pts</span>
+                    </div>
+                    <div class="timeline-step" id="timeline-7">
+                      <div class="step-circle">7</div>
+                      <span class="step-title">Trade In + Purchase</span>
+                      <span class="step-pts">1,300 pts</span>
+                    </div>
+                  </div>
+
+                  <!-- HOW TO COMPLETE GRID -->
+                  <h3 class="subsection-title">How To Complete</h3>
+                  <div class="cards-grid">
+
+                    <div class="mission-card active-card" id="mission-1" data-mission-id="1">
+                      <div class="card-header">
+                        <div class="card-icon"><i class="fa-solid fa-user-check"></i></div>
+                        <span class="pts-pill">100 pts</span>
+                      </div>
+                      <h4>Have an MZA Account</h4>
+                      <p>Automatically credited when you register.</p>
+                      <span class="mission-auto-pill"><i class="fa-solid fa-check"></i> Auto-credited</span>
+                    </div>
+
+                    <div class="mission-card " id="mission-2" data-mission-id="2">
+                      <div class="card-header">
+                        <div class="card-icon"><i class="fa-solid fa-location-dot"></i></div>
+                        <span class="pts-pill">200 pts</span>
+                      </div>
+                      <h4>Visit a Zong CSC</h4>
+                      <p>Scan the QR code at check-in, or upload your picture.</p>
+
+                    </div>
+
+                    <div class="mission-card " id="mission-3" data-mission-id="3">
+                      <div class="card-header">
+                        <div class="card-icon"><i class="fa-solid fa-camera"></i></div>
+                        <span class="pts-pill">300 pts</span>
+                      </div>
+                      <h4>Post with a handset</h4>
+                      <p>Snap a pic at a Zong CSC with a handset from SiS and post publicly with #ZFreedomLeague.</p>
+
+                    </div>
+
+                    <div class="mission-card" id="mission-4" data-mission-id="4">
+                      <div class="card-header">
+                        <div class="card-icon"><i class="fa-solid fa-users"></i></div>
+                        <span class="pts-pill">250 pts</span>
+                      </div>
+                      <h4>Refer a friend to a demo</h4>
+                      <p>Share a 30-second video of your friend experiencing Zong network on Experience Zone handsets at
+                        CSC.</p>
+
+                    </div>
+
+                    <div class="mission-card" id="mission-5" data-mission-id="5">
+                      <div class="card-header">
+                        <div class="card-icon"><i class="fa-solid fa-calculator"></i></div>
+                        <span class="pts-pill">300 pts</span>
+                      </div>
+                      <h4>Get a trade-in evaluation</h4>
+                      <p>Check your old phone's value in-app and share a video.</p>
+
+                    </div>
+
+                    <div class="mission-card" id="mission-6" data-mission-id="6">
+                      <div class="card-header">
+                        <div class="card-icon"><i class="fa-solid fa-bag-shopping"></i></div>
+                        <span class="pts-pill">1,000 pts</span>
+                      </div>
+                      <h4>Purchase a new handset</h4>
+                      <p>Share your purchase invoice.</p>
+
+                    </div>
+
+                    <div class="mission-card" id="mission-7" data-mission-id="7">
+                      <div class="card-header">
+                        <div class="card-icon"><i class="fa-solid fa-arrows-rotate"></i></div>
+                        <span class="pts-pill">1,300 pts</span>
+                      </div>
+                      <h4>Trade in + purchase new</h4>
+                      <p>Share purchase invoice and trade-in invoice.</p>
+
+                    </div>
+
+                  </div>
+
+                  <!-- <div class="demo-controls">
+        <button type="button" id="resetDemoBtn" class="demo-reset-btn">
+          <i class="fa-solid fa-rotate-left"></i> Reset Demo Progress
+        </button>
+      </div> -->
+                </div>
+              </section>
+
+
+              <!-- FAQ SECTION -->
+              <section class="faq-section">
+                <div class="container">
+                  <div class="section-title">
+                    <h2>FREQUENTLY ASKED QUESTIONS</h2>
+                  </div>
+                  <div class="faq-accordion">
+
+                    <details class="faq-item">
+                      <summary>How do I join Freedom League?</summary>
+                      <div class="faq-answer">
+                        Open the My Zong App, register for Freedom League, and you're in. It takes about 10 seconds and
+                        comes with your first 100 points.
+                      </div>
+                    </details>
+
+                    <details class="faq-item">
+                      <summary>Do I need to buy a handset to participate?</summary>
+                      <div class="faq-answer">
+                        No. You can earn points and win prizes through missions like visiting a CSC, getting a trade-in
+                        evaluation, or referring a friend—a purchase isn't required to join or to earn rewards.
+                      </div>
+                    </details>
+
+                    <details class="faq-item">
+                      <summary>How do I know my points were credited?</summary>
+                      <div class="faq-answer">
+                        Your MZA dashboard updates to show points. Once a mission is verified, your Freedom Points and
+                        league status update automatically — no need to wait or follow up.
+                      </div>
+                    </details>
+
+                    <details class="faq-item">
+                      <summary>What counts as "posting publicly" for the CSC + handset mission?</summary>
+                      <div class="faq-answer">
+                        Your photo needs to be on a public profile or story (not private/restricted) with the hashtag
+                        #ZFreedomLeague, so it's visible for verification.
+                      </div>
+                    </details>
+
+                    <details class="faq-item">
+                      <summary>Can I complete the same mission more than once?</summary>
+                      <div class="faq-answer">
+                        Some missions, like CSC visits, may be repeatable — check your dashboard for whether a mission
+                        shows as one-time or recurring. Trade-in evaluation and purchase-based missions are one-time per
+                        transaction.
+                      </div>
+                    </details>
+
+                    <details class="faq-item">
+                      <summary>How long do I have to submit proof (photos, videos, invoices)?</summary>
+                      <div class="faq-answer">
+                        Submit your evidence within the same campaign visit or transaction for fastest verification.
+                        Late submissions may not be processed before the campaign ends.
+                      </div>
+                    </details>
+
+                    <details class="faq-item">
+                      <summary>What happens if my trade-in evaluation says my phone isn't eligible?</summary>
+                      <div class="faq-answer">
+                        You still earn your Trade-In Evaluation points for completing the check as eligibility for the
+                        actual trade-in program is assessed separately.
+                      </div>
+                    </details>
+
+                    <details class="faq-item">
+                      <summary>How are league tiers calculated?</summary>
+                      <div class="faq-answer">
+                        Your tier (Bronze, Silver, Gold) is based on your total accumulated Freedom Points at any given
+                        time. Higher tiers unlock more lucky draw entries and better rewards.
+                      </div>
+                    </details>
+
+                    <details class="faq-item">
+                      <summary>When are winners announced?</summary>
+                      <div class="faq-answer">
+                        Weekly draw winners are announced throughout the campaign; the Grand Independence Day draw
+                        winner is announced at campaign close. Winners are notified directly via the My Zong App.
+                      </div>
+                    </details>
+
+                    <details class="faq-item">
+                      <summary>Is there a cost to participate?</summary>
+                      <div class="faq-answer">
+                        No, Freedom League is free to join. Standard costs only apply if you choose to purchase a
+                        handset, trade in a device, or activate a bundle.
+                      </div>
+                    </details>
+
+                    <details class="faq-item">
+                      <summary>Can I refer more than one friend?</summary>
+                      <div class="faq-answer">
+                        Yes, there's no cap mentioned on referrals, so you can earn the Refer-a-Friend points multiple
+                        times as long as each referral is a distinct new participant completing a demo.
+                      </div>
+                    </details>
+
+                  </div>
+                </div>
+              </section>
+
+              <!-- FOOTER -->
+              <section class="site-footer">
+                <div class="container footer-content">
+                  <p class="partner-text">In partnership with <strong>Samsung</strong> & <strong>Mercantile</strong></p>
+                  <div class="footer-meta">
+                    <span>#ZFreedomLeague</span>
+                    <span class="divider">|</span>
+                    <span>Campaign runs through Independence Month 1st to 14th August 2026</span>
+                    <span class="divider">|</span>
+                    <span>T&Cs apply</span>
+                  </div>
+                </div>
+              </section>
+
+  </main>
+
+  <script>
+    (function () {
+      var STORAGE_KEY = 'zongFreedomLeagueMissions';
+      var DEFAULT_COMPLETED = [1, 2];
+
+      var MISSIONS = [
+        { id: 1, points: 100 },
+        { id: 2, points: 200 },
+        { id: 3, points: 300 },
+        { id: 4, points: 250 },
+        { id: 5, points: 300 },
+        { id: 6, points: 1000 },
+        { id: 7, points: 1300 }
+      ];
+
+      var TOTAL_POINTS = MISSIONS.reduce(function (sum, m) { return sum + m.points; }, 0);
+
+      var TIERS = [
+        { key: 'bronze', min: 0 },
+        { key: 'silver', min: 650 },
+        { key: 'gold', min: 1200 }
+      ];
+
+      function loadCompleted() {
+        try {
+          var saved = JSON.parse(window.localStorage.getItem(STORAGE_KEY));
+          if (Array.isArray(saved)) return saved;
+        } catch (e) { }
+        return DEFAULT_COMPLETED.slice();
+      }
+
+      function saveCompleted(completed) {
+        window.localStorage.setItem(STORAGE_KEY, JSON.stringify(completed));
+      }
+
+      function getCurrentTier(points) {
+        var current = TIERS[0].key;
+        for (var i = 0; i < TIERS.length; i++) {
+          if (points >= TIERS[i].min) current = TIERS[i].key;
+        }
+        return current;
+      }
+
+      function render() {
+        var completed = loadCompleted();
+        var totalEarned = MISSIONS.reduce(function (sum, m) {
+          return completed.indexOf(m.id) !== -1 ? sum + m.points : sum;
+        }, 0);
+
+        var badge = document.getElementById('userPointsEarned');
+        if (badge) badge.textContent = totalEarned.toLocaleString();
+
+        var fill = document.getElementById('leagueProgressFill');
+        if (fill) fill.style.width = Math.min(100, (totalEarned / TOTAL_POINTS) * 100) + '%';
+
+        var currentTier = getCurrentTier(totalEarned);
+        TIERS.forEach(function (t) {
+          var el = document.getElementById('tier-' + t.key);
+          if (el) el.classList.toggle('active', t.key === currentTier);
+        });
+
+        var firstIncomplete = null;
+        for (var i = 0; i < MISSIONS.length; i++) {
+          if (completed.indexOf(MISSIONS[i].id) === -1) {
+            firstIncomplete = MISSIONS[i];
+            break;
+          }
+        }
+
+        MISSIONS.forEach(function (m) {
+          var isDone = completed.indexOf(m.id) !== -1;
+          var isActive = !!firstIncomplete && firstIncomplete.id === m.id;
+
+          var step = document.getElementById('timeline-' + '0');
+          if (step) {
+            step.classList.toggle('completed', isDone);
+            step.classList.toggle('active', isActive);
+            var circle = step.querySelector('.step-circle');
+            if (circle) circle.innerHTML = isDone ? '<i class="fa-solid fa-check"></i>' : String(m.id);
+          }
+
+          var card = document.getElementById('mission-' + m.id);
+          if (card) {
+            card.classList.toggle('completed', isDone);
+            card.classList.toggle('active-card', isActive);
+            var btn = card.querySelector('.mission-action-btn');
+            if (btn) {
+              btn.disabled = isDone;
+              btn.classList.toggle('is-done', isDone);
+              btn.textContent = isDone ? 'Completed' : 'Mark as Done (Demo)';
+            }
+          }
+        });
+
+        var timelineStep1 = document.getElementById('timeline-1');
+        if (timelineStep1) timelineStep1.classList.add('active');
+
+        document.querySelectorAll('.mission-card[data-mission-id]').forEach(function (card) {
+          card.classList.toggle('active-card', card.id === 'mission-1');
+        });
+      }
+
+      function completeMission(id) {
+        var completed = loadCompleted();
+        if (completed.indexOf(id) === -1) {
+          completed.push(id);
+          saveCompleted(completed);
+          render();
+        }
+      }
+
+      function resetDemo() {
+        saveCompleted(DEFAULT_COMPLETED.slice());
+        render();
+      }
+
+      document.addEventListener('DOMContentLoaded', function () {
+        var cards = document.querySelectorAll('.mission-card[data-mission-id]');
+        cards.forEach(function (card) {
+          var btn = card.querySelector('.mission-action-btn');
+          if (!btn) return;
+          btn.addEventListener('click', function () {
+            completeMission(parseInt(card.getAttribute('data-mission-id'), 10));
+          });
+        });
+
+        var resetBtn = document.getElementById('resetDemoBtn');
+        if (resetBtn) resetBtn.addEventListener('click', resetDemo);
+
+        render();
+      });
+    })();
+  </script>
+
+  <!-- ============================================================ -->
+  <!-- WORDPRESS PASTE END                                          -->
+  <!-- ============================================================ -->
+
+</body>
+
+</html>
